@@ -1,3 +1,27 @@
 <h3>{{title}}</h3>
 
-<pre>{{data | json}}</pre>
+<!--<pre>{{data | json}}</pre>-->
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Year</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of dischi">
+            <td>{{d.id}}</td>
+            <td>{{d.title}}</td>
+            <td>{{d.artist}}</td>
+            <td>{{d.year}}</td>
+            <td>{{d.company}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button type="button" (click)="makeGetRequest()">GET</button>
+<button type="button" (click)="makePostRequest()">POST</button>
